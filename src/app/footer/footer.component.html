@@ -1,28 +1,10 @@
 <footer>
 	<div class="footer-box">
 		<ul>
-			<li class="active">
-				<a href="#">
+			<li *ngFor="let item of footerNavs" [class.active]="item.status"  (click)="chooseFooter(item.id,item.url)">
+				<a href="javascript:void(0)">
 					<i></i>
-					<span>首页</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i></i>
-					<span>分类</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i></i>
-					<span>购物车</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i></i>
-					<span>我</span>
+					<span>{{item.name}}</span>
 				</a>
 			</li>
 		</ul>

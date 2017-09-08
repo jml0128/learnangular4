@@ -23,10 +23,10 @@ export class NavbarComponent implements OnInit {
   ){}
   
   ngOnInit() {
-  
-  
+	this.categoryId = this.routeInfo.snapshot.params["id"];
+	
     this.Products = [
-	  new Product(1,"推荐",1,0),
+	  new Product(1,"推荐",0,0),
 	  new Product(2,"居家",0,1),
 	  new Product(3,"玩家",0,2),
 	  new Product(4,"吃货",0,3),
@@ -35,20 +35,24 @@ export class NavbarComponent implements OnInit {
 	  new Product(7,"玩具",0,6),
 	  new Product(8,"婴童",0,7),
 	];
+	if(this.categoryId){
+		this.Products[this.categoryId].status = 1;
+	}else{
+		this.Products[0].status = 1;
+	}
 	
-	this.categoryId = this.routeInfo.snapshot.params["id"]
   }
   
   toGoodsCategory(id,url){
+	for(var i in this.Products){
+	  this.Products[i].status = 0;
+	}
+	this.Products[id-1].status = 1;
     if(url == 0){
 	  this.router.navigate(['./']);
 	}else{
 	  this.router.navigate(['/category',url]);
 	}
-	for(var i in this.Products){
-	  this.Products[i].status = 0;
-	}
-	this.Products[id-1].status = 1;
   }
   
 }

@@ -11,12 +11,19 @@ import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 import { NewsComponent } from './news/news.component';
 import { CategoryComponent } from './category/category.component';
-import { NewsBannerComponent } from './news-banner/news-banner.component';
+import { MeComponent } from './me/me.component';
+import { BuycarComponent } from './buycar/buycar.component';
+import { HeaderComponent } from './header/header.component';
+import { IndexComponent } from './index/index.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 const routes: Routes = [
-  {path: '',component: NewsBannerComponent},
+  {path: '',redirectTo: '/index',pathMatch: 'full'},
+  {path: 'index',component: IndexComponent},
   {path: 'category/:id',component: CategoryComponent},
-  {path: 'category',component: CategoryComponent}
+  {path: 'category-list',component: CategoryListComponent},
+  {path: 'me',component: MeComponent},
+  {path: 'buycar',component: BuycarComponent},
 ]
 
 @NgModule({
@@ -28,7 +35,11 @@ const routes: Routes = [
     ProductComponent,
     NewsComponent,
     CategoryComponent,
-    NewsBannerComponent
+    MeComponent,
+    BuycarComponent,
+    HeaderComponent,
+    IndexComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
