@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { CategoryService, footerNav } from '../service/category.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,32 +8,25 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  private footerNavs: Array<footerNav>;
+  private footerNavs: footerNav[];
   private name : string;
-  ngOnInit() {
-	this.name = location.pathname.slice(1);
-    this.footerNavs = [
-	  new footerNav(1,'首页',0,"index"),
-	  new footerNav(2,'分类',0,"category-list"),
-	  new footerNav(3,'购物车',0,"buycar"),
-	  new footerNav(4,'我',0,"me")
-	];
-	for(var i in this.footerNavs){
-	  if(this.footerNavs[i].url == this.name){
-		  this.footerNavs[i].status = 1;
-	  };
-	}
-  }
+    
   constructor(
 	private routeInfo: ActivatedRoute,
-	private router: Router
+	private router: Router,
+	private CategoryService: CategoryService,
   ){}
   
-  chooseFooter(id,url){
-    if(url == "index"){
-	  this.router.navigate(['./']);
-	}else{
-	  this.router.navigate([url]);
+  ngOnInit() {
+	this.name = location.pathname.slice(1);
+    this.footerNavs = this.CategoryService.getFooterNav();
+	this.CategoryService.chooseFooterNav(this.name)[0].status = 1;
+  }
+  
+  changeStatus(id,url){
+	this.router.navigate([url]);
+	for(var i in this.footerNavs){
+		this.footerNavs[i].status = 0;
 	}
 	for(var i in this.footerNavs){
 	  this.footerNavs[i].status = 0;
@@ -41,12 +35,3 @@ export class FooterComponent implements OnInit {
   }
   
 }
-
-  export class footerNav{
-    constructor(
-	  public  id:number,
-	  public  name:string,
-	  public  status:number,
-	  public  url:string
-	){}
-  }

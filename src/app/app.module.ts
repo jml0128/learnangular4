@@ -16,6 +16,7 @@ import { BuycarComponent } from './buycar/buycar.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryService } from './service/category.service';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -46,7 +47,7 @@ const routes: Routes = [
 	RouterModule.forRoot(routes),
 	HttpClientModule
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
