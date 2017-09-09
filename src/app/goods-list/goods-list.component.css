@@ -1,0 +1,113 @@
+.wrap{
+	width:10rem;
+	height:85%;
+	padding:0;
+}
+.row{
+	margin:0;
+}
+.goods-list{
+	width:100%;
+	height:100%;
+	background:#fff;
+	margin-top:0.05rem;
+}
+.goods-list .category-title{
+	padding:0.3rem 0;
+	margin:0 1rem;
+	font-size:0.48rem;
+	text-align:center;
+	/* border-bottom:.02333rem solid #efefef; */
+}
+.goods-list .hidden{
+	display:none;
+}
+.goods-list ul{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.goods-list ul li{
+	margin:0;
+	list-style:none;
+	position:relative;
+	float:left;
+	width:5rem;
+	padding:0.2rem 0.25rem;
+	border-bottom:.02333rem solid #efefef;
+}
+.goods-list ul li:nth-child(2n+1):after{
+	content: ' ';
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: .02333rem;
+    background-color: #efefef;
+}
+.goods-list ul li .top{
+	position:relative;
+	height:4.5rem;
+}
+.goods-list ul li .top .goods-img{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.goods-list ul li .top .goods-decs{
+	padding:0.1rem 0.2rem;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	text-align:center;
+	background:rgba(0,0,0,0.7);
+	color:#fff;
+	font-size:0.38rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	white-space:nowrap;
+}
+.goods-list ul li .bottom{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.goods-list ul li .bottom .name-price{
+	width:4rem;
+	overflow:hidden;
+	margin-right:0.15rem;
+	
+}
+.goods-list ul li .bottom .name-price .goods-name{
+	font-size:0.42rem;
+	margin:0;
+	margin-top:0.2rem;
+	margin-bottom:0.1rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	white-space:nowrap;
+}
+.goods-list ul li .bottom .name-price .goods-price{
+	font-size:0.42rem;
+	margin:0;
+	margin-bottom:0.1rem;
+	color:#ab2b2b;
+}
+.goods-list ul li .bottom .buy{
+	padding:0.1rem 0.3rem;
+	background-color:#ab2b2b;
+	color:#fff;
+	font-size:0.38rem;
+	border-radius:0.15rem;
+	white-space:nowrap;
+}
+.goods-list .no-goods{
+	display:none;
+}
+.goods-list .show{
+	display:block;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { CategoryService, footerNav } from '../service/category.service';
+import { DataService, footerNav } from '../service/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,18 +9,22 @@ import { CategoryService, footerNav } from '../service/category.service';
 })
 export class FooterComponent implements OnInit {
   private footerNavs: footerNav[];
-  private name : string;
+  private url : string;
+  private flag : any;
     
   constructor(
 	private routeInfo: ActivatedRoute,
 	private router: Router,
-	private CategoryService: CategoryService,
+	private DataService: DataService
   ){}
   
   ngOnInit() {
-	this.name = location.pathname.slice(1);
-    this.footerNavs = this.CategoryService.getFooterNav();
-	this.CategoryService.chooseFooterNav(this.name)[0].status = 1;
+	this.url = location.pathname.slice(1);
+	this.flag = this.DataService.chooseFooterNav(this.url);
+    this.footerNavs = this.DataService.getFooterNav();
+	if(this.flag){
+		this.footerNavs[this.flag].status = 1;
+	}
   }
   
   changeStatus(id,url){

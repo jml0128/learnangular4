@@ -8,20 +8,19 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
-import { ProductComponent } from './product/product.component';
 import { NewsComponent } from './news/news.component';
-import { CategoryComponent } from './category/category.component';
 import { MeComponent } from './me/me.component';
 import { BuycarComponent } from './buycar/buycar.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import { CategoryListComponent } from './category-list/category-list.component';
-import { CategoryService } from './service/category.service';
+import { DataService } from './service/data.service';
+import { GoodsListComponent } from './goods-list/goods-list.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
   {path: 'index',component: IndexComponent},
-  {path: 'category/:id',component: CategoryComponent},
+  {path: 'category/:id',component: GoodsListComponent},
   {path: 'category-list',component: CategoryListComponent},
   {path: 'me',component: MeComponent},
   {path: 'buycar',component: BuycarComponent},
@@ -33,21 +32,20 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     BannerComponent,
-    ProductComponent,
     NewsComponent,
-    CategoryComponent,
     MeComponent,
     BuycarComponent,
     HeaderComponent,
     IndexComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    GoodsListComponent
   ],
   imports: [
     BrowserModule,
 	RouterModule.forRoot(routes),
 	HttpClientModule
   ],
-  providers: [CategoryService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

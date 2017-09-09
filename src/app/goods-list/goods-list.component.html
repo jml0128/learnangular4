@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container wrap">
+<div class="goods-list">
+	<div class="category-title">{{categoryName}}</div>
+	<ul [class.hidden]="!goods.length">
+		<li *ngFor="let item of goods">
+			<div class="img-decs top">
+				<img class="goods-img" src="http://placehold.it/300x300" alt="商品头图">
+				<span class="goods-decs">{{item.decs}}</span>
+			</div>
+			<div class="bottom">
+				<div class="name-price">
+					<p class="goods-name">{{item.name}}</p>
+					<p class="goods-price">{{item.price}}积分</p>
+				</div>
+				<div class="buy">
+					兑换
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="no-goods" [class.show]="!goods.length">
+		兄弟，这个分类下没有商品
+	</div>
+</div>
+</div>
