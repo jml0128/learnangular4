@@ -16,12 +16,14 @@ import { IndexComponent } from './index/index.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { DataService } from './service/data.service';
 import { GoodsListComponent } from './goods-list/goods-list.component';
+import { GoodsDetailsComponent } from './goods-details/goods-details.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
   {path: 'index',component: IndexComponent},
   {path: 'category/:id',component: GoodsListComponent},
   {path: 'category-list',component: CategoryListComponent},
+  {path: 'goods/:id',component: GoodsDetailsComponent},
   {path: 'me',component: MeComponent},
   {path: 'buycar',component: BuycarComponent},
 ]
@@ -38,7 +40,8 @@ const routes: Routes = [
     HeaderComponent,
     IndexComponent,
     CategoryListComponent,
-    GoodsListComponent
+    GoodsListComponent,
+    GoodsDetailsComponent
   ],
   imports: [
     BrowserModule,

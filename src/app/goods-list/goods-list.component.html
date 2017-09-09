@@ -3,7 +3,7 @@
 <div class="goods-list">
 	<div class="category-title">{{categoryName}}</div>
 	<ul [class.hidden]="!goods.length">
-		<li *ngFor="let item of goods">
+		<li *ngFor="let item of goods" (click)="chooseGoods(item.id)">
 			<div class="img-decs top">
 				<img class="goods-img" src="http://placehold.it/300x300" alt="商品头图">
 				<span class="goods-decs">{{item.decs}}</span>
@@ -24,3 +24,4 @@
 	</div>
 </div>
 </div>
+<app-footer></app-footer>

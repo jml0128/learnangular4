@@ -24,7 +24,8 @@ export class GoodsListComponent implements OnInit {
     this.routeInfo.params.subscribe((params:Params) => this.categoryId = params["id"]);
     this.routeInfo.params.subscribe((params:Params) => this.categoryName = this.DataService.chooseCategory(this.categoryId).name);
     this.routeInfo.params.subscribe((params:Params) => this.goods = this.DataService.getGoods(this.categoryId));
-	console.log(this.goods);
   }
-
+  chooseGoods(id){
+	this.router.navigate(['/goods/'+id]);
+  }
 }

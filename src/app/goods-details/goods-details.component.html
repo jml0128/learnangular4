@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container wrap">
+	<div class="goods" *ngFor="let item of goodsData">
+		<div class="goods-imgs">
+			<img src="http://placehold.it/300x300">
+		</div>
+		<div class="goods-info">
+			<div class="left">
+				<div class="goods-name">{{item.name}}</div>
+				<div class="goods-decs">{{item.decs}}</div>
+				<div class="goods-price">0元+{{item.price}}积分</div>
+			</div>
+			<div class="right no" [class.hidden]="details.status" *ngFor="let details of goodsDetails" (click)="changeStatus(details.status)">
+				<i></i>
+				<p>点我收藏</p>
+			</div>
+			<div class="right yes" [class.show]="details.status" *ngFor="let details of goodsDetails" (click)="changeStatus(details.status)">
+				<i></i>
+				<p>已收藏</p>
+			</div>
+		</div>
+		<div class="goods-property">
+			<div>选择商品属性以及数量</div>
+			<i> > </i>
+		</div>
+		<div class="goods-details" *ngFor="let details of goodsDetails" >
+			<div class="goods-details-title">图文详情</div>
+			<div class="goods-details-con">{{details.details}}</div>
+		</div>
+	</div>
+	<div class="user-operate">
+		<i><a href="javascript :;" onClick="javascript :history.back(-1);"> < </a></i>
+		<div class="buy">立即兑换</div>
+		<div class="into-buycar">加入购物车</div>
+	</div>
+</div>
