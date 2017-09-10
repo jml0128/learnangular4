@@ -17,6 +17,8 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { DataService } from './service/data.service';
 import { GoodsListComponent } from './goods-list/goods-list.component';
 import { GoodsDetailsComponent } from './goods-details/goods-details.component';
+import { GoodsPropertyComponent } from './goods-property/goods-property.component';
+import { BuyBtnGroupComponent } from './buy-btn-group/buy-btn-group.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -24,6 +26,7 @@ const routes: Routes = [
   {path: 'category/:id',component: GoodsListComponent},
   {path: 'category-list',component: CategoryListComponent},
   {path: 'goods/:id',component: GoodsDetailsComponent},
+  {path: 'goods-property/:id',component: GoodsPropertyComponent},
   {path: 'me',component: MeComponent},
   {path: 'buycar',component: BuycarComponent},
 ]
@@ -41,7 +44,9 @@ const routes: Routes = [
     IndexComponent,
     CategoryListComponent,
     GoodsListComponent,
-    GoodsDetailsComponent
+    GoodsDetailsComponent,
+	GoodsPropertyComponent,
+	BuyBtnGroupComponent
   ],
   imports: [
     BrowserModule,

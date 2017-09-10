@@ -1,0 +1,39 @@
+.user-operate{
+	position:fixed;
+	bottom:0;
+	width:10rem;
+	height:1.48rem;
+	border-top:0.02rem solid #ccc;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	background:#fff;
+}
+.user-operate i{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-right:0.02rem solid #ccc;
+	font-weight:bold;
+	padding:0.1rem 0;
+	width:1rem;
+	height:100%;
+	text-align:center;
+	font-size:0.36rem;
+}
+.user-operate div{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:4.5rem;
+	text-align:center;
+	font-size:0.48rem;
+}
+.user-operate .buy{
+	color:#ab2b2b;
+}
+.user-operate .into-buycar{
+	color:#fff;
+	background:#ab2b2b;
+	height:100%;
+}

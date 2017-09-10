@@ -24,14 +24,14 @@ export class DataService {
 	];
 	
 	private goods:  goodsInfo[] = [
-	  new goodsInfo(11,1,'商品1','商品1的描述',298),
-	  new goodsInfo(12,1,'商品2','商品2的描述',176),
-	  new goodsInfo(13,2,'商品3','商品3的描述',123),
-	  new goodsInfo(14,2,'商品4','商品4的描述',142),
-	  new goodsInfo(15,2,'商品5','商品5的描述',211),
-	  new goodsInfo(16,3,'商品6','商品6的描述',33),
-	  new goodsInfo(17,4,'商品7','商品7的描述',1123),
-	  new goodsInfo(18,4,'商品8','商品8的描述',322)
+	  new goodsInfo(11,1,'商品1','商品1的描述',298,new goodsProperty('颜色',['白色1','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(12,1,'商品2','商品2的描述',176,new goodsProperty('颜色',['白色2','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(13,2,'商品3','商品3的描述',123,new goodsProperty('颜色',['白色3','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(14,2,'商品4','商品4的描述',142,new goodsProperty('颜色',['白色4','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(15,2,'商品5','商品5的描述',211,new goodsProperty('颜色',['白色5','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(16,3,'商品6','商品6的描述',33,new goodsProperty('颜色',['白色6','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(17,4,'商品7','商品7的描述',1123,new goodsProperty('颜色',['白色7','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(18,4,'商品8','商品8的描述',322,new goodsProperty('颜色',['白色8','黑色']),new goodsProperty('大小',['大','小']))
 	];
 	
 	private goodsData:  goodsDetails[] = [
@@ -103,7 +103,9 @@ export class goodsInfo{
 	  public  categoryId:number,
 	  public  name:string,
 	  public  decs:string,
-	  public  price:number
+	  public  price:number,
+	  public  property1:any,
+	  public  property2:any
 	){}
 }
 
@@ -112,5 +114,12 @@ export class goodsDetails{
 	  public  id:number,
 	  public  details:string,
 	  public  status:number,
+	){}
+}
+
+export class goodsProperty{
+	constructor(
+	  public  name:string,
+	  public  property:any
 	){}
 }

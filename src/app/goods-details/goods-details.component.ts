@@ -26,13 +26,13 @@ export class GoodsDetailsComponent implements OnInit {
 	this.goodsDetails = this.DataService.getGoodsDetails(this.goodsId);
 	
 	this.goodsData = this.DataService.getGoodsData(this.goodsId);
-	console.log(this.goodsDetails);
-	console.log(this.goodsData);
   }
   
   changeStatus(goodsStatus){
 	 goodsStatus = (goodsStatus == 1 ? 0 : 1);
 	 this.goodsDetails[0].status = goodsStatus;
-	 console.log(this.goodsDetails[0].status);
+  }
+  chooseProperty(id){
+	  this.router.navigate(['/goods-property/'+id]);
   }
 }
