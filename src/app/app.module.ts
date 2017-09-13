@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
+import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -53,7 +54,9 @@ const routes: Routes = [
 	RouterModule.forRoot(routes),
 	HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+  {provide:LocationStrategy, useClass:HashLocationStrategy},
+  { provide: APP_BASE_HREF, useValue: '/angularshop/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

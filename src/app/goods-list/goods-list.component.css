@@ -1,6 +1,7 @@
 .wrap{
 	width:10rem;
-	height:85%;
+	height:auto;
+	min-height:85%;
 	padding:0;
 }
 .row{

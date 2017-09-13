@@ -37,7 +37,7 @@ header{
 	flex-grow: 1;
 }
 .header-box .search i{
-	background-image:url(/assets/img/icon.png);
+	background-image:url(img/icon.png);
 	margin:0 0.1rem;
 	background-size:3rem;
 	background-position:0.05rem -0.35rem;
@@ -52,7 +52,7 @@ header{
 	margin-right:0.1rem;
 }
 .header-box .message .message-icon{
-	background-image:url(/assets/img/icon.png);
+	background-image:url(img/icon.png);
 	background-size:2.5rem;
 	background-position:-3.15rem -0.15rem;
 	width:0.8rem;

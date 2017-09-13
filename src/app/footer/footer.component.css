@@ -37,7 +37,7 @@ footer{
 	color:#666;
 }
 .footer-box ul li a i{
-	background:url(/assets/img/footer-icon.png);
+	background:url(img/footer-icon.png);
 	background-size:3rem;
 	display:block;
 	width:0.78rem;
@@ -53,7 +53,7 @@ footer{
 	background-position:-2.25rem 0;
 }
 .footer-box ul .active a i{
-	background:url(/assets/img/footer-icon-active.png);
+	background:url(img/footer-icon-active.png);
 	background-size:3rem;
 }
 .footer-box ul .active a{
