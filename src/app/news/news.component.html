@@ -2,7 +2,9 @@
 	<div class="news-title">
 		<a href="#">码头新闻</a>
 	</div>
-	<ul class="news-list">
-		<li  *ngFor="let item of news"><a href="#">{{item.name}}</a></li>
+	<ul class="news-list swiper-container news-nswiper">
+		  <div class="swiper-wrapper">
+			<li  *ngFor="let item of news" class="swiper-slide"><a href="#">{{item.name}}</a></li>
+		  </div>
 	</ul>
 </div>

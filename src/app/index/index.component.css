@@ -1,3 +1,17 @@
+header{
+	width:10rem;
+	height:2.28rem;
+	margin:auto;
+}
+.header-all{
+	width:100%;
+	height:2.28rem;
+	position:fixed;
+	background:#fff;
+	z-index:2;
+	left:0;
+	top:0;
+}
 .wrap{
 	width:10rem;
 	height:100%;

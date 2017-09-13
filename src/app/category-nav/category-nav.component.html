@@ -1,0 +1,9 @@
+<div class="nav-box">
+	<div class="nav-all">
+		<nav>
+			<ul>
+				<li *ngFor="let item of categories" [class.active]="item.status"  (click)="toGoodsCategory(item.id,item.url)">{{item.name}}</li>
+			</ul>
+		</nav>
+	</div>
+</div>

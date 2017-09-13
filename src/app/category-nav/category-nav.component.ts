@@ -3,15 +3,14 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { DataService, category } from '../service/data.service';
 
-
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-category-nav',
+  templateUrl: './category-nav.component.html',
+  styleUrls: ['./category-nav.component.css']
 })
-export class NavbarComponent implements OnInit {
-  
-  private categories : category[];
+export class CategoryNavComponent implements OnInit {
+
+   private categories : category[];
   
   private categoryId : number;
   
@@ -49,7 +48,5 @@ export class NavbarComponent implements OnInit {
 	  this.router.navigate(['/category',url]);
 	}
   }
-  
-}
 
-  
+}

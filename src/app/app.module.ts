@@ -6,7 +6,6 @@ import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/
 
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { NewsComponent } from './news/news.component';
@@ -20,6 +19,7 @@ import { GoodsListComponent } from './goods-list/goods-list.component';
 import { GoodsDetailsComponent } from './goods-details/goods-details.component';
 import { GoodsPropertyComponent } from './goods-property/goods-property.component';
 import { BuyBtnGroupComponent } from './buy-btn-group/buy-btn-group.component';
+import { CategoryNavComponent } from './category-nav/category-nav.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -35,7 +35,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     FooterComponent,
     BannerComponent,
     NewsComponent,
@@ -47,7 +46,8 @@ const routes: Routes = [
     GoodsListComponent,
     GoodsDetailsComponent,
 	GoodsPropertyComponent,
-	BuyBtnGroupComponent
+	BuyBtnGroupComponent,
+	CategoryNavComponent
   ],
   imports: [
     BrowserModule,

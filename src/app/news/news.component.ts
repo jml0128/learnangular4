@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as swiper from 'swiper';
 
 @Component({
   selector: 'app-news',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
   private news : Array<news>;
+  
+  private newsSwiper : any;
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +20,14 @@ export class NewsComponent implements OnInit {
 	  new news(4,"我是新闻4","#"),
 	  new news(5,"我是新闻5","#")
 	];
+	
+	setTimeout(() => {
+		this.newsSwiper = new swiper('.news-nswiper', {
+		  autoplay : 4000,
+		  onlyExternal : true,
+		  direction : 'vertical',
+		});
+	},300)
   }
 
 }
