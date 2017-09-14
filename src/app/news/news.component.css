@@ -23,6 +23,7 @@
 	padding:0;
 	margin:0;
 	list-style:none;
+	z-index:1;
 }
 .news .news-list li{
 	height:100%;

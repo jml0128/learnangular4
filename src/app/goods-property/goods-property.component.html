@@ -25,14 +25,8 @@
 					<li *ngFor="let property of goodsProperty2.property">{{property}}</li>
 				</ul>
 			</div>
-			<div class="goods-num">
-				<h2>数量</h2>
-				<div>
-					<span (click)="reduceNum()">-</span>
-					<span>{{goodsNum}}</span>
-					<span (click)="addNum()">+</span>
-				</div>
-			</div>
+			<h2>数量</h2>
+			<app-goods-num></app-goods-num>
 		</div>
 	</div>
 	<app-buy-btn-group></app-buy-btn-group>

@@ -1,0 +1,27 @@
+.goods-num h2{
+	font-size:0.38rem;
+	margin:0.2rem 0;
+}
+.goods-num div{
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+	line-height:1;
+	width:auto;
+	min-width:1rem;
+}
+.goods-num div span{
+	max-width:1rem;
+	padding:0 0.2rem;
+	font-size:0.68rem;
+	border:0.02333rem solid #666;
+	min-width:1rem;
+	min-height:0.7rem;
+	line-height:0.7rem;
+	text-align:center;
+}
+.goods-num div span:nth-child(2){
+	border-left:none;
+	border-right:none;
+	font-size:0.38rem;
+}

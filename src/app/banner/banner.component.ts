@@ -16,6 +16,7 @@ export class BannerComponent implements OnInit {
 	this.mySwiper = new swiper('.banner-swiper', {
 		pagination : '.swiper-pagination',
 		autoplay : 5000,
+        autoplayDisableOnInteraction : false,
 		loop : true,
 		});
   }

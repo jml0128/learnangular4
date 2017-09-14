@@ -12,8 +12,6 @@ export class GoodsPropertyComponent implements OnInit {
   
   private goodsId : number;
   
-  private goodsNum : number;
-  
   private chooseProperty1 : number;
   
   private chooseProperty2 : number;
@@ -36,17 +34,6 @@ export class GoodsPropertyComponent implements OnInit {
 	this.goodsProperty1 = this.goodsData[0].property1;
 	
 	this.goodsProperty2 = this.goodsData[0].property2;
-	
-	this.goodsNum = 1;
   }
 
-  addNum(){
-	  this.goodsNum += 1;
-  }
-  reduceNum(){
-	  if(this.goodsNum < 2){
-		  return;
-	  }
-	  this.goodsNum -= 1;
-  }
 }

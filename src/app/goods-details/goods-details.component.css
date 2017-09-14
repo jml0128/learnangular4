@@ -31,13 +31,13 @@
 	margin-left:0.5rem;
 }
 .goods .goods-info .left .goods-name{
-	font-size:0.48rem;
+	font-size:0.42rem;
 }
 .goods .goods-info .left .goods-decs{
 	font-size:0.38rem;
 }
 .goods .goods-info .left .goods-price{
-	font-size:0.48rem;
+	font-size:0.42rem;
 	color:#ab2b2b;
 }
 .goods .goods-info .right{
@@ -80,7 +80,7 @@
 	background:#fff;
 	margin-top:0.05rem;
 	padding:0.3rem 0.5rem;
-	font-size:0.48rem;
+	font-size:0.38rem;
 }
 .goods .goods-details{
 	height:10rem;
@@ -88,7 +88,7 @@
 	background:#fff;
 }
 .goods .goods-details .goods-details-title{
-	font-size:0.48rem;
+	font-size:0.42rem;
 	padding:0.5rem 0;
 	text-align:center;
 }

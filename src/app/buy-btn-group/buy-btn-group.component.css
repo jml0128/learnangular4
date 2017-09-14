@@ -21,6 +21,14 @@
 	text-align:center;
 	font-size:0.36rem;
 }
+.user-operate i a{
+	background-image:url(img/back.png);
+	background-size:0.5rem;
+	background-repeat:no-repeat;
+	background-position:0.2rem 0.37rem;
+	width:100%;
+	height:100%;
+}
 .user-operate div{
 	display:flex;
 	align-items:center;

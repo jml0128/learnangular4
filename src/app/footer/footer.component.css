@@ -6,6 +6,7 @@ footer{
 	left:0;
 	bottom:0;
 	background-color:#fff;
+	z-index:5;
 }
 .footer-box{
 	width:100%;

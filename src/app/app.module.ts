@@ -20,6 +20,8 @@ import { GoodsDetailsComponent } from './goods-details/goods-details.component';
 import { GoodsPropertyComponent } from './goods-property/goods-property.component';
 import { BuyBtnGroupComponent } from './buy-btn-group/buy-btn-group.component';
 import { CategoryNavComponent } from './category-nav/category-nav.component';
+import { ChooseGoodsComponent } from './choose-goods/choose-goods.component';
+import { GoodsNumComponent } from './goods-num/goods-num.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -47,7 +49,9 @@ const routes: Routes = [
     GoodsDetailsComponent,
 	GoodsPropertyComponent,
 	BuyBtnGroupComponent,
-	CategoryNavComponent
+	CategoryNavComponent,
+	ChooseGoodsComponent,
+	GoodsNumComponent
   ],
   imports: [
     BrowserModule,
