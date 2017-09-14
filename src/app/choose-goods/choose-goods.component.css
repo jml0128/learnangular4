@@ -5,14 +5,6 @@
 	margin-top:0.05rem;
 	background:#fff;
 }
-.all-goods .choose{
-	width:0.5rem;
-	height:0.5rem;
-	border:0.02rem solid #666;
-	border-radius:0.5rem;
-	align-self:center;
-	margin-right:0.2rem;
-}
 .all-goods ul li{
 	padding:0.2rem 0.3rem;
 	background:#fff;
@@ -21,56 +13,6 @@
 .all-goods ul li .goods-edit{
 	text-align:right;
 	padding-right:0.3rem;
-}
-.all-goods ul li .goods-card{
-	display:flex;
-}
-.all-goods ul li .goods-img{
-	width:2.5rem;
-	height:2.5rem;
-	align-self:center;
-}
-.all-goods ul li .goods-info{
-	margin:0 0.2rem;
-	flex-grow: 1;
-	margin-top:0.2rem;
-	position:relative;
-}
-.all-goods ul li .goods-info .goods-name{
-	font-size:0.42rem;
-}
-.all-goods ul li .goods-info .goods-property{
-	font-size:0.38rem;
-	max-width:80%;
-}
-.all-goods ul li .goods-info .goods-price{
-	font-size:0.38rem;
-	color:#ab2b2b;
-}
-.all-goods ul li .goods-info .goods-num{
-	position:absolute;
-	font-size:0.36rem;
-	top:0.5rem;
-	right:0;
-}
-.all-goods ul li .goods-info .revise-num{
-	position:absolute;
-	bottom:0.1rem;
-	right:0;
-}
-.all-goods ul li .goods-operate{
-	float:right;
-}
-.all-goods ul li .goods-operate .goods-del{
-	background:url(img/del.png);
-	background-repeat:no-repeat;
-	background-size:0.6rem;
-	width:0.6rem;
-	height:0.6rem;
-	float:right;
-}
-.all-goods ul li .goods-operate .revise-num{
-	margin-top:0.6rem;
 }
 .all-goods .operate{
 	position:fixed;

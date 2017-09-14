@@ -1,0 +1,13 @@
+<div class="goods-card">
+	<div class="choose"></div>
+	<img src="http://placehold.it/250x250" class="goods-img">
+	<div class="goods-info">
+		<div class="goods-name">{{goodsInfo.name}}</div>
+		<div class="goods-property">{{goodsInfo.property}}</div>
+		<div class="goods-price">{{goodsInfo.price}}积分</div>
+		<div class="goods-num">x{{lastNum.num}}</div>
+		<div class="revise-num">
+			<app-goods-num  (lastNum)="getNum($event)"></app-goods-num>
+		</div>
+	</div>
+</div>

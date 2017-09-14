@@ -22,6 +22,7 @@ import { BuyBtnGroupComponent } from './buy-btn-group/buy-btn-group.component';
 import { CategoryNavComponent } from './category-nav/category-nav.component';
 import { ChooseGoodsComponent } from './choose-goods/choose-goods.component';
 import { GoodsNumComponent } from './goods-num/goods-num.component';
+import { GoodsComfirmComponent } from './goods-comfirm/goods-comfirm.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -51,7 +52,8 @@ const routes: Routes = [
 	BuyBtnGroupComponent,
 	CategoryNavComponent,
 	ChooseGoodsComponent,
-	GoodsNumComponent
+	GoodsNumComponent,
+	GoodsComfirmComponent
   ],
   imports: [
     BrowserModule,

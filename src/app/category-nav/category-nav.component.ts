@@ -10,7 +10,7 @@ import { DataService, category } from '../service/data.service';
 })
 export class CategoryNavComponent implements OnInit {
 
-   private categories : category[];
+  private categories : category[];
   
   private categoryId : number;
   

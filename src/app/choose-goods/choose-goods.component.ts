@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService, buyCar } from '../service/data.service';
 
 @Component({
   selector: 'app-choose-goods',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choose-goods.component.css']
 })
 export class ChooseGoodsComponent implements OnInit {
-
-  constructor() { }
+	
+  private buyGoods : buyCar[];
+  private price : any;
+  constructor(
+	private DataService: DataService
+	) { }
 
   ngOnInit() {
+	  this.buyGoods = this.DataService.getBuyCars();
   }
-
 }

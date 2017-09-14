@@ -23,6 +23,13 @@ export class DataService {
 	  new footerNav(4,'我',0,"me")
 	];
 	
+	private buyCars:  buyCar[] = [
+	  new buyCar(11,'我是商品1',298,"属性1"),
+	  new buyCar(12,'我是商品2',176,"属性2"),
+	  new buyCar(13,'我是商品3',123,"属性3"),
+	  new buyCar(14,'我是商品4',142,"属性4")
+	];
+	
 	private goods:  goodsInfo[] = [
 	  new goodsInfo(11,1,'商品1','商品1的描述',298,new goodsProperty('颜色',['白色1','黑色']),new goodsProperty('大小',['大','小'])),
 	  new goodsInfo(12,1,'商品2','商品2的描述',176,new goodsProperty('颜色',['白色2','黑色']),new goodsProperty('大小',['大','小'])),
@@ -55,6 +62,14 @@ export class DataService {
   
   getFooterNav(){
 	return this.footerNavs;
+  }
+  
+  getBuyCars(){
+	return this.buyCars;
+  }
+  
+  getGoodsInfo(id:number): buyCar{
+	return this.buyCars.find((buyCar: buyCar) => buyCar.id == id);
   }
   
   chooseFooterNav(url:string): string{
@@ -106,6 +121,15 @@ export class goodsInfo{
 	  public  price:number,
 	  public  property1:any,
 	  public  property2:any
+	){}
+}
+
+export class buyCar{
+	constructor(
+	  public  id:number,
+	  public  name:string,
+	  public  price:number,
+	  public  property:any
 	){}
 }
 

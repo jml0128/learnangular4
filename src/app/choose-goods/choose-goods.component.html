@@ -1,35 +1,7 @@
 <div class="all-goods">
 	<ul>
-		<li>
-			<!-- <div class="goods-edit">编辑</div> -->
-			<div class="goods-card">
-				<div class="choose"></div>
-				<img src="http://placehold.it/250x250" class="goods-img">
-				<div class="goods-info">
-					<div class="goods-name">商品名称商品名称商品名称</div>
-					<div class="goods-property">商品属性商品属性商品属性商品属性</div>
-					<div class="goods-price">252积分</div>
-					<div class="goods-num">x2</div>
-					<div class="revise-num">
-						<app-goods-num></app-goods-num>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<div class="goods-card">
-				<div class="choose"></div>
-				<img src="http://placehold.it/250x250" class="goods-img">
-				<div class="goods-info">
-					<div class="goods-name">商品名称商品名称商品名称</div>
-					<div class="goods-property">商品属性</div>
-					<div class="goods-price">252积分</div>
-					<div class="goods-num">x2</div>
-					<div class="revise-num">
-						<app-goods-num></app-goods-num>
-					</div>
-				</div>
-			</div>
+		<li *ngFor="let item of buyGoods">
+			<app-goods-comfirm [goodsId]="item.id"></app-goods-comfirm>
 		</li>
 	</ul>
 	<div class="operate">
@@ -37,7 +9,7 @@
 			<div class="choose-all choose"></div>
 			<span>已选(2)</span>
 		</div>
-		<div class="all-price">总计:<span>350</span>积分</div>
+		<div class="all-price">总计:<span>222</span>积分</div>
 		<div class="buy-now">立即兑换</div>
 	</div>
 </div>

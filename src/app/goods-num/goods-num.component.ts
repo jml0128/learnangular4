@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-goods-num',
@@ -6,23 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goods-num.component.css']
 })
 export class GoodsNumComponent implements OnInit {
-
-  private goodsNum : number;
+  
+  goodsNumber : any;
+  
+  @Output()
+  lastNum : EventEmitter<goodsNum> = new EventEmitter();
   
   constructor() { }
 
   ngOnInit() {
-	
-	this.goodsNum = 1;
+	this.goodsNumber = new goodsNum(1);
   }
 
   addNum(){
-	  this.goodsNum += 1;
+	  this.goodsNumber.num += 1;
+	  this.lastNum.emit(this.goodsNumber);
   }
   reduceNum(){
-	  if(this.goodsNum < 2){
+	  if(this.goodsNumber.num < 2){
 		  return;
 	  }
-	  this.goodsNum -= 1;
+	  this.goodsNumber.num -= 1;
+	  this.lastNum.emit(this.goodsNumber);
   }
+}
+export class goodsNum{
+  constructor(
+	public num: number,
+  ){}
 }
