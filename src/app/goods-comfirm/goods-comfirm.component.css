@@ -1,3 +1,9 @@
+.choose-box{
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 .choose{
 	width:0.5rem;
 	height:0.5rem;
@@ -6,8 +12,17 @@
 	align-self:center;
 	margin-right:0.2rem;
 }
+.active{
+	background:#ab2b2b;
+	background-image:url(img/choose.png);
+	background-size: 0.43rem;
+	background-repeat:no-repeat;
+	background-position:0.03rem 0.05rem;
+	border:none;
+}
 .goods-card{
 	display:flex;
+	height:2.8rem;
 }
 .goods-img{
 	width:2.5rem;

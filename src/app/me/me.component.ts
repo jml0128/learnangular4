@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService, userMenu } from '../service/data.service';
 
 @Component({
   selector: 'app-me',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./me.component.css']
 })
 export class MeComponent implements OnInit {
-
-  constructor() { }
-
+  
+  private userMenus: Array<userMenu>;
+  
+  constructor(
+	private DataService: DataService
+	) { }
+  
   ngOnInit() {
+	this.userMenus = this.DataService.getUserMenus();
+	console.log(this.userMenus);
   }
 
 }

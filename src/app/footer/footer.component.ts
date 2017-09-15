@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { DataService, footerNav } from '../service/data.service';
+import { DataService, footerNav, buyCar } from '../service/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +11,8 @@ export class FooterComponent implements OnInit {
   private footerNavs: footerNav[];
   private url : string;
   private flag : any;
+  private chooseNum : number;
+  private buyGoods : buyCar[];
     
   constructor(
 	private routeInfo: ActivatedRoute,
@@ -19,12 +21,19 @@ export class FooterComponent implements OnInit {
   ){}
   
   ngOnInit() {
-	this.url = location.pathname.slice(1);
+	this.url = location.hash.slice(14);
 	this.flag = this.DataService.chooseFooterNav(this.url);
     this.footerNavs = this.DataService.getFooterNav();
 	if(this.flag){
 		this.footerNavs[this.flag].status = 1;
 	}
+	this.buyGoods = this.DataService.getBuyCars();
+	  setInterval(() => {
+		this.chooseNum = 0;
+		for(let i in this.buyGoods){
+			this.chooseNum += this.buyGoods[i].num;
+		}
+	  },0)
   }
   
   changeStatus(id,url){

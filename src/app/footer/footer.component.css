@@ -31,6 +31,7 @@ footer{
 }
 .footer-box ul li{
 	text-align:center;
+	position:relative;
 }
 .footer-box ul li a{
 	text-decoration:none;
@@ -43,6 +44,20 @@ footer{
 	display:block;
 	width:0.78rem;
 	height:0.78rem;
+}
+.footer-box ul li .goods-num{
+	display:none;
+	position:absolute;
+	top: .08333rem;
+    right: .08rem;
+	width: .58rem;
+	height: .37333rem;
+	border-radius: .18667rem;
+    background-color: #b4282d;
+    text-align: center;
+    line-height: .42333rem;
+    font-size: .24rem;
+    color: #fff;
 }
 .footer-box ul li:nth-child(2) a i{
 	background-position:-0.75rem 0;

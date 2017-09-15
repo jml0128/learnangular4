@@ -23,11 +23,24 @@ export class DataService {
 	  new footerNav(4,'我',0,"me")
 	];
 	
+	private userMenus:  userMenu[] = [
+	  new userMenu(1,'我的订单',"img/1.png"),
+	  new userMenu(2,'充值积分',"img/2.png"),
+	  new userMenu(3,'充值金豆',"img/3.png"),
+	  new userMenu(4,'收货地址',"img/4.png"),
+	  new userMenu(5,'消费记录',"img/5.png"),
+	  new userMenu(6,'我的兑换码',"img/6.png"),
+	  new userMenu(7,'账户安全',"img/7.png"),
+	  new userMenu(8,'联系客服',"img/7.png"),
+	  new userMenu(8,'退出登录',"img/8.png")
+	];
+	
 	private buyCars:  buyCar[] = [
-	  new buyCar(11,'我是商品1',298,"属性1"),
-	  new buyCar(12,'我是商品2',176,"属性2"),
-	  new buyCar(13,'我是商品3',123,"属性3"),
-	  new buyCar(14,'我是商品4',142,"属性4")
+	  new buyCar(11,'我是商品1',298,"属性1",1,0),
+	  new buyCar(12,'我是商品2',176,"属性2",1,0),
+	  new buyCar(13,'我是商品3',123,"属性3",1,0),
+	  new buyCar(14,'我是商品4',142,"属性4",2,0),
+	  new buyCar(15,'我是商品5',211,"属性5",3,0)
 	];
 	
 	private goods:  goodsInfo[] = [
@@ -66,6 +79,10 @@ export class DataService {
   
   getBuyCars(){
 	return this.buyCars;
+  }
+  
+  getUserMenus(){
+	return this.userMenus;
   }
   
   getGoodsInfo(id:number): buyCar{
@@ -129,7 +146,9 @@ export class buyCar{
 	  public  id:number,
 	  public  name:string,
 	  public  price:number,
-	  public  property:any
+	  public  property:any,
+	  public  num:number,
+	  public  status:number
 	){}
 }
 
@@ -145,5 +164,13 @@ export class goodsProperty{
 	constructor(
 	  public  name:string,
 	  public  property:any
+	){}
+}
+
+export class userMenu{
+	constructor(
+	  public id:number,
+	  public  name:string,
+	  public  icon:string
 	){}
 }

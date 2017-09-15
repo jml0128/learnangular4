@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataService, buyCar } from '../service/data.service';
 
 @Component({
   selector: 'app-goods-num',
@@ -12,10 +13,17 @@ export class GoodsNumComponent implements OnInit {
   @Output()
   lastNum : EventEmitter<goodsNum> = new EventEmitter();
   
+  @Input()
+  firstNum :number;
+  
   constructor() { }
 
   ngOnInit() {
-	this.goodsNumber = new goodsNum(1);
+	if(this.firstNum == undefined){
+	  this.goodsNumber = new goodsNum(1);
+	}else{
+	  this.goodsNumber = new goodsNum(this.firstNum);
+	}
   }
 
   addNum(){

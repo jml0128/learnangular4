@@ -2,6 +2,7 @@
 	<div class="footer-box">
 		<ul>
 			<li *ngFor="let item of footerNavs" [class.active]="item.status" (click)="changeStatus(item.id,item.url)">
+				<div class="goods-num" [class.show]="item.id == 3">{{chooseNum}}</div>
 				<a href="javascript:void(0)">
 					<i></i>
 					<span>{{item.name}}</span>

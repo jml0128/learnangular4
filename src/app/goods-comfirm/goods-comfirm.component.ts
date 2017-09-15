@@ -14,18 +14,24 @@ export class GoodsComfirmComponent implements OnInit {
   
   private goodsInfo:any;
   
-  private lastNum:goodsNum = new goodsNum(1);
+  private lastNum:goodsNum;
   
   constructor(
 	private DataService: DataService
 	) { }
 
   ngOnInit() {
-	  this.goodsInfo = this.DataService.getGoodsInfo(this.goodsId);
+	
+	this.goodsInfo = this.DataService.getGoodsInfo(this.goodsId);
+	
+	this.lastNum = new goodsNum(this.goodsInfo.num);
   }
 
   getNum(event:goodsNum){
 	  this.lastNum = event;
+	  this.goodsInfo.num = this.lastNum.num;
   }
-
+  changeStatus(){
+    this.goodsInfo.status = !this.goodsInfo.status;
+  }
 }
