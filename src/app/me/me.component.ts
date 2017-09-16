@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DataService, userMenu } from '../service/data.service';
 
 @Component({
@@ -11,12 +12,16 @@ export class MeComponent implements OnInit {
   private userMenus: Array<userMenu>;
   
   constructor(
-	private DataService: DataService
+	private DataService: DataService,
+	private routeInfo: ActivatedRoute,
+	private router: Router,
 	) { }
   
   ngOnInit() {
 	this.userMenus = this.DataService.getUserMenus();
-	console.log(this.userMenus);
   }
-
+  
+  chooseMenu(url){
+	this.router.navigate(['./',url,'1']);
+  }
 }

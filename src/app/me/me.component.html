@@ -9,8 +9,8 @@
 	<div class="me-bottom">
 		<div class="menu">
 			<ul>
-				<li *ngFor="let item of userMenus">
-					<i></i>
+				<li *ngFor="let item of userMenus" (click)="chooseMenu(item.url)">
+					<i><img src="assets/{{item.icon}}" width="100%"></i>
 					<p>{{item.name}}</p>
 				</li>
 			</ul>

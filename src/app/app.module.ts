@@ -23,6 +23,7 @@ import { CategoryNavComponent } from './category-nav/category-nav.component';
 import { ChooseGoodsComponent } from './choose-goods/choose-goods.component';
 import { GoodsNumComponent } from './goods-num/goods-num.component';
 import { GoodsComfirmComponent } from './goods-comfirm/goods-comfirm.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   {path: '',redirectTo: '/index',pathMatch: 'full'},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'goods-property/:id',component: GoodsPropertyComponent},
   {path: 'me',component: MeComponent},
   {path: 'buycar',component: BuycarComponent},
+  {path: 'order/:id',component: OrderComponent},
 ]
 
 @NgModule({
@@ -53,7 +55,8 @@ const routes: Routes = [
 	CategoryNavComponent,
 	ChooseGoodsComponent,
 	GoodsNumComponent,
-	GoodsComfirmComponent
+	GoodsComfirmComponent,
+	OrderComponent
   ],
   imports: [
     BrowserModule,

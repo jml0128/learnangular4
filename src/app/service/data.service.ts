@@ -24,15 +24,15 @@ export class DataService {
 	];
 	
 	private userMenus:  userMenu[] = [
-	  new userMenu(1,'我的订单',"img/1.png"),
-	  new userMenu(2,'充值积分',"img/2.png"),
-	  new userMenu(3,'充值金豆',"img/3.png"),
-	  new userMenu(4,'收货地址',"img/4.png"),
-	  new userMenu(5,'消费记录',"img/5.png"),
-	  new userMenu(6,'我的兑换码',"img/6.png"),
-	  new userMenu(7,'账户安全',"img/7.png"),
-	  new userMenu(8,'联系客服',"img/7.png"),
-	  new userMenu(8,'退出登录',"img/8.png")
+	  new userMenu(1,'order','我的订单',"img/1.png"),
+	  new userMenu(2,'order','充值积分',"img/2.png"),
+	  new userMenu(3,'order','充值金豆',"img/3.png"),
+	  new userMenu(4,'order','收货地址',"img/4.png"),
+	  new userMenu(5,'order','消费记录',"img/5.png"),
+	  new userMenu(6,'order','我的兑换码',"img/6.png"),
+	  new userMenu(7,'order','账户安全',"img/7.png"),
+	  new userMenu(8,'order','联系客服',"img/8.png"),
+	  new userMenu(8,'order','退出登录',"img/9.png")
 	];
 	
 	private buyCars:  buyCar[] = [
@@ -170,6 +170,7 @@ export class goodsProperty{
 export class userMenu{
 	constructor(
 	  public id:number,
+	  public url:string,
 	  public  name:string,
 	  public  icon:string
 	){}

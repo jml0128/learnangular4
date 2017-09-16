@@ -1,0 +1,15 @@
+<div class="page-title-box">
+	<div class="page-title">我的订单</div>
+</div>
+<div class="my-order">
+	<ul class="order-status">
+		<li (click)="chooseOrderStatus(1)">待付款</li>
+		<li (click)="chooseOrderStatus(2)">待发货</li>
+		<li (click)="chooseOrderStatus(3)">待确认</li>
+		<li (click)="chooseOrderStatus(4)">已完成</li>
+	</ul>
+	<div class="order-list" [class.show]="orderStatus == 1">待付款</div>
+	<div class="order-list" [class.show]="orderStatus == 2">待发货</div>
+	<div class="order-list" [class.show]="orderStatus == 3">待确认</div>
+	<div class="order-list" [class.show]="orderStatus == 4">已完成</div>
+</div>

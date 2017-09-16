@@ -1,0 +1,29 @@
+.page-title-box{
+	width:10rem;
+	height:1.08rem;
+}
+.page-title{
+	width:100%;
+	height:1.08rem;
+	background:#fff;
+	text-align:center;
+	line-height:1.08rem;
+	font-size:0.48rem;
+	position:fixed;
+	z-index:3;
+}
+.order-status{
+	margin-top:0.05rem;
+	padding:0.2rem 0;
+	background:#fff;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.order-status li{
+	width:25%;
+	text-align:center;
+}
+.order-list{
+	display:none;
+}
