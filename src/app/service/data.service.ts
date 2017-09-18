@@ -65,6 +65,16 @@ export class DataService {
 	  new goodsDetails(18,'详细介绍详细介绍详细介绍',0)
 	];
 	
+	private orderInfos:  orderInfo[] = [
+	  new orderInfo(11,'商品1','商品1的属性',298,2,1,'申通快递','12345678'),
+	  new orderInfo(12,'商品2','商品2的属性',123,1,3,'申通快递','12345678'),
+	  new orderInfo(13,'商品3','商品3的属性',222,3,2,'申通快递','12345678'),
+	  new orderInfo(14,'商品4','商品4的属性',333,4,2,'申通快递','12345678'),
+	  new orderInfo(2,'商品5','商品5的属性',5532,5,3,'申通快递','12345678'),
+	  new orderInfo(33,'商品6','商品6的属性',123,6,4,'申通快递','12345678'),
+	  new orderInfo(44,'商品7','商品7的属性',321,7,1,'申通快递','12345678'),
+	];
+	
   getCategories(){
 	return this.categories
   }
@@ -75,6 +85,10 @@ export class DataService {
   
   getFooterNav(){
 	return this.footerNavs;
+  }
+  
+  getOrderInfos(){
+	return this.orderInfos;
   }
   
   getBuyCars(){
@@ -169,9 +183,22 @@ export class goodsProperty{
 
 export class userMenu{
 	constructor(
-	  public id:number,
-	  public url:string,
+	  public  id:number,
+	  public  url:string,
 	  public  name:string,
 	  public  icon:string
+	){}
+}
+
+export class orderInfo{
+	constructor(
+	  public  id:number,
+	  public  name:string,
+	  public  property:string,
+	  public  price:number,
+	  public  num:number,
+	  public  status:number,
+	  public  expressName:string,
+	  public  expressNum:string
 	){}
 }

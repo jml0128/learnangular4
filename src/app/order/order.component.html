@@ -1,15 +1,108 @@
 <div class="page-title-box">
-	<div class="page-title">我的订单</div>
+	<div class="page-title-main">
+		<div class="back" (click)="backUser()"></div>
+		<div  class="page-title">我的订单</div>
+	</div>
 </div>
 <div class="my-order">
 	<ul class="order-status">
-		<li (click)="chooseOrderStatus(1)">待付款</li>
-		<li (click)="chooseOrderStatus(2)">待发货</li>
-		<li (click)="chooseOrderStatus(3)">待确认</li>
-		<li (click)="chooseOrderStatus(4)">已完成</li>
+		<li (click)="chooseOrderStatus(1)"  [class.active]="orderStatus == 1">待付款</li>
+		<li (click)="chooseOrderStatus(2)"  [class.active]="orderStatus == 2">待发货</li>
+		<li (click)="chooseOrderStatus(3)"  [class.active]="orderStatus == 3">待确认</li>
+		<li (click)="chooseOrderStatus(4)"  [class.active]="orderStatus == 4">已完成</li>
 	</ul>
-	<div class="order-list" [class.show]="orderStatus == 1">待付款</div>
-	<div class="order-list" [class.show]="orderStatus == 2">待发货</div>
-	<div class="order-list" [class.show]="orderStatus == 3">待确认</div>
-	<div class="order-list" [class.show]="orderStatus == 4">已完成</div>
+	<div class="order-list" [class.show]="orderStatus == 1">
+		<ul>
+			<li class="order-empty" [class.order-show]="!orderList.length">
+				<div>目前没有订单哦~</div>
+				<div class="choose-other">逛逛看</div>
+			</li>
+			<li *ngFor="let item of orderList">
+				<div class="order-num">订单号:{{item.num}}</div>
+				<div class="order-info-box">
+					<img src="http://placehold.it/250x250" />
+					<div class="order-info">
+						<div class="goods-name">{{item.name}}</div>
+						<div class="goods-property">{{item.property}}</div>
+						<div class="goods-price">{{item.price}}积分</div>
+						<div class="goods-num">x{{item.num}}</div>
+						<div class="order-operate">
+							<div class="cancel">取消</div>
+							<div class="buy">付款</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="order-list" [class.show]="orderStatus == 2">
+		<ul>
+			<li class="order-empty" [class.order-show]="!orderList.length">
+				<div>目前没有订单哦~</div>
+				<div class="choose-other">逛逛看</div>
+			</li>
+			<li *ngFor="let item of orderList">
+				<div class="order-num">订单号:{{item.num}}</div>
+				<div class="order-info-box">
+					<img src="http://placehold.it/250x250" />
+					<div class="order-info">
+						<div class="goods-name">{{item.name}}</div>
+						<div class="goods-property">{{item.property}}</div>
+						<div class="goods-price">{{item.price}}积分</div>
+						<div class="goods-num">x{{item.num}}</div>
+						<div class="order-operate">
+							<div class="wait">正在配货中...</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="order-list" [class.show]="orderStatus == 3">
+		<ul>
+			<li class="order-empty" [class.order-show]="!orderList.length">
+				<div>目前没有订单哦~</div>
+				<div class="choose-other">逛逛看</div>
+			</li>
+			<li *ngFor="let item of orderList">
+				<div class="order-num">订单号:{{item.num}}</div>
+				<div class="order-info-box">
+					<img src="http://placehold.it/250x250" />
+					<div class="order-info">
+						<div class="goods-name">{{item.name}}</div>
+						<div class="goods-property">{{item.property}}</div>
+						<div class="goods-price">{{item.price}}积分</div>
+						<div class="goods-num">x{{item.num}}</div>
+						<div class="order-operate">
+							<div class="cancel">查询物流</div>
+							<div class="buy">确认收货</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="order-list" [class.show]="orderStatus == 4">
+		<ul>
+			<li class="order-empty" [class.order-show]="!orderList.length">
+				<div>目前没有订单哦~</div>
+				<div class="choose-other">逛逛看</div>
+			</li>
+			<li *ngFor="let item of orderList">
+				<div class="order-num">订单号:{{item.num}}</div>
+				<div class="order-info-box">
+					<img src="http://placehold.it/250x250" />
+					<div class="order-info">
+						<div class="goods-name">{{item.name}}</div>
+						<div class="goods-property">{{item.property}}</div>
+						<div class="goods-price">{{item.price}}积分</div>
+						<div class="goods-num">x{{item.num}}</div>
+						<div class="order-operate">
+							<div class="buy">评价</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
