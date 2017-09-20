@@ -24,10 +24,11 @@ export class CategoryNavComponent implements OnInit {
   ngOnInit() {
 	
 	this.categoryId = this.routeInfo.snapshot.params["id"];
-	
     this.categories = this.DataService.getCategories();
-	if(this.categoryId && this.categoryId < this.categories.length){
-	  this.categories[this.categoryId].status = 1;
+	if(this.categoryId){
+	  if(this.categories.find((category: category) => category.url == this.categoryId)){
+		this.categories.find((category: category) => category.url == this.categoryId).status = 1;
+	  }
     }else{
 	  for(var i in this.categories){
 		this.categories[i].status = 0;
@@ -37,11 +38,11 @@ export class CategoryNavComponent implements OnInit {
 	
   }
   
-  toGoodsCategory(id,url){
+  toGoodsCategory(url){
 	for(var i in this.categories){
 	  this.categories[i].status = 0;
 	}
-	this.categories[id-1].status = 1;
+	this.categories.find((category: category) => category.url == url).status = 1;
     if(url == 0){
 	  this.router.navigate(['./']);
 	}else{

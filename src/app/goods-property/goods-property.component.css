@@ -66,5 +66,9 @@
 	margin-right:0.2rem;
 	margin-bottom:0.15rem;
 }
+.goods-property-box .goods-property ul .active{
+	color:#ab2b2b;
+	border-color:#ab2b2b;
+}
 
 

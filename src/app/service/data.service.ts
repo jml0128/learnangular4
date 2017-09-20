@@ -7,13 +7,13 @@ export class DataService {
 	private flag: string;
     private categories:  category[] = [
 	  new category(1,"推荐",0,0),
-	  new category(2,"居家",0,1),
-	  new category(3,"玩家",0,2),
-	  new category(4,"吃货",0,3),
-	  new category(5,"情趣",0,4),
-	  new category(6,"穿搭",0,5),
-	  new category(7,"玩具",0,6),
-	  new category(8,"婴童",0,7),
+	  new category(2,"居家",0,11),
+	  new category(3,"玩家",0,12),
+	  new category(4,"吃货",0,13),
+	  new category(5,"情趣",0,14),
+	  new category(6,"穿搭",0,15),
+	  new category(7,"玩具",0,16),
+	  new category(8,"婴童",0,17),
 	];
 	
 	private footerNavs:  footerNav[] = [
@@ -44,17 +44,18 @@ export class DataService {
 	];
 	
 	private goods:  goodsInfo[] = [
-	  new goodsInfo(11,1,'商品1','商品1的描述',298,new goodsProperty('颜色',['白色1','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(12,1,'商品2','商品2的描述',176,new goodsProperty('颜色',['白色2','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(13,2,'商品3','商品3的描述',123,new goodsProperty('颜色',['白色3','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(14,2,'商品4','商品4的描述',142,new goodsProperty('颜色',['白色4','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(15,2,'商品5','商品5的描述',211,new goodsProperty('颜色',['白色5','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(16,3,'商品6','商品6的描述',33,new goodsProperty('颜色',['白色6','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(17,4,'商品7','商品7的描述',1123,new goodsProperty('颜色',['白色7','黑色']),new goodsProperty('大小',['大','小'])),
-	  new goodsInfo(18,4,'商品8','商品8的描述',322,new goodsProperty('颜色',['白色8','黑色']),new goodsProperty('大小',['大','小']))
+	  new goodsInfo(11,11,'商品1','商品1的描述',298,new goodsProperty('颜色',['白色1','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(12,11,'商品2','商品2的描述',176,new goodsProperty('颜色',['白色2','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(13,12,'商品3','商品3的描述',123,new goodsProperty('颜色',['白色3','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(14,12,'商品4','商品4的描述',142,new goodsProperty('颜色',['白色4','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(15,12,'商品5','商品5的描述',211,new goodsProperty('颜色',['白色5','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(16,13,'商品6','商品6的描述',33,new goodsProperty('颜色',['白色6','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(17,14,'商品7','商品7的描述',1123,new goodsProperty('颜色',['白色7','黑色']),new goodsProperty('大小',['大','小'])),
+	  new goodsInfo(18,14,'商品8','商品8的描述',322,new goodsProperty('颜色',['白色8','黑色']),new goodsProperty('大小',['大','小']))
 	];
 	
 	private goodsData:  goodsDetails[] = [
+	  new goodsDetails(10,'详细介绍详细介绍详细介绍',0),
 	  new goodsDetails(11,'详细介绍详细介绍详细介绍',0),
 	  new goodsDetails(12,'详细介绍详细介绍详细介绍',0),
 	  new goodsDetails(13,'详细介绍详细介绍详细介绍',0),

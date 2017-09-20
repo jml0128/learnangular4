@@ -7,11 +7,11 @@
 <div class="container wrap">
 	<div class="goods-list">
 		<div class="category-title">{{categoryName}}</div>
-		<ul [class.hidden]="!goods.length">
+		<ul [class.hidden]="!flag">
 			<li *ngFor="let item of goods" (click)="chooseGoods(item.id)">
 				<div class="img-decs top">
 					<img class="goods-img" src="http://placehold.it/300x300" alt="商品头图">
-					<span class="goods-decs">{{item.decs}}</span>
+					<span class="goods-decs">{{item.desc}}</span>
 				</div>
 				<div class="bottom">
 					<div class="name-price">
@@ -24,8 +24,14 @@
 				</div>
 			</li>
 		</ul>
-		<div class="no-goods" [class.show]="!goods.length">
+		<div class="no-goods" [class.show]="flag == -2">
+			正在获取商品
+		</div>
+		<div class="no-goods" [class.show]="!flag">
 			兄弟，这个分类下没有商品
+		</div>
+		<div class="no-goods" [class.show]="flag == -1">
+			数据库连接失败，请稍后重试
 		</div>
 	</div>
 </div>

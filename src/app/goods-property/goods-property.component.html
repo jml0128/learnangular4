@@ -1,5 +1,5 @@
 <div class="container wrap">
-	<div class="goods-property-box" *ngFor="let item of goodsData">
+	<div class="goods-property-box">
 		<h1>请选择商品属性</h1>
 		<div class="goods-info">
 			<div class="left">
@@ -8,21 +8,15 @@
 				</div>
 			</div>
 			<div class="right">
-				<div class="goods-name">{{item.name}}</div>
-				<div class="goods-price">0元+{{item.price}}积分</div>
+				<div class="goods-name">{{goodsName}}</div>
+				<div class="goods-price">0元+{{goodsPrice}}积分</div>
 			</div>
 		</div>
 		<div class="goods-property">
-			<div class="property-1">
-				<h2>{{goodsProperty1.name}}</h2>
+			<div class="property" *ngFor="let item of goodsProperties">
+				<h2>{{item.name}}</h2>
 				<ul>
-					<li *ngFor="let property of goodsProperty1.property">{{property}}</li>
-				</ul>
-			</div>
-			<div class="property-2">
-				<h2>{{goodsProperty2.name}}</h2>
-				<ul>
-					<li *ngFor="let property of goodsProperty2.property">{{property}}</li>
+					<li *ngFor="let property of item.property" (click)="chooseProperty(property,$event)" class="goods_property {{item.name}}">{{property}}</li>
 				</ul>
 			</div>
 			<h2>数量</h2>

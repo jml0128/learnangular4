@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DataService, goodsDetails, goodsInfo } from '../service/data.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-goods-details',
@@ -10,18 +11,28 @@ import { DataService, goodsDetails, goodsInfo } from '../service/data.service';
 export class GoodsDetailsComponent implements OnInit {
   private goodsDetails : goodsDetails[];
   
-  private goodsData : goodsInfo[];
+  private goodsData : any;
   
   private goodsId : number;
   
   constructor(
 	private routeInfo: ActivatedRoute,
 	private router: Router,
-	private DataService: DataService
+	private DataService: DataService,
+	private http: HttpClient
 	) {}
 
   ngOnInit() {
 	this.goodsId = this.routeInfo.snapshot.params["id"];
+	console.log(this.goodsId);
+	
+	this.http.get("http://localhost:3000/getGoodsInfo/" + this.goodsId).subscribe(
+	data => {
+	  this.goodsData = data;
+	  console.log(this.goodsData);
+	},
+	err => {
+	});
 	
 	this.goodsDetails = this.DataService.getGoodsDetails(this.goodsId);
 	
